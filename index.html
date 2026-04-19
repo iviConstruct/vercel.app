@@ -1,47 +1,56 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Ultra Portfolio</title>
+    <title>iviConstruct - Constructii Profesionale</title>
 
     <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+<!-- NAV -->
 <header class="nav">
     <div class="logo">iviConstruct ⚡</div>
+
     <nav>
-        <a href="#about">Обо мне</a>
-        <a href="#projects">Проекты</a>
-        <a href="#contact">Контакты</a>
+        <a href="#about">Despre</a>
+        <a href="#projects">Servicii</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-   <img src="https://i.imgur.com/0y0y0y0.png" class="avatar" alt="avatar">
+    <div class="hero-box">
+        <h1>Construcții Profesionale</h1>
+        <p>Șapă • Tencuială • Gips-carton • Gresie • Parchet</p>
 
-<h1>Salut 👋</h1>
-<p>Creez site-uri moderne</p>
-
-<a href="#projects" class="btn">Lucrările mele</a>
-<a href="mailto:example@mail.com" class="btn secondary">Angajează-mă</a>
+        <a href="#projects" class="btn">Vezi lucrările</a>
+        <a href="#contact" class="btn secondary">Contactează-ne</a>
     </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="section">
-   <h2>Despre mine</h2>
-<p>Sunt un dezvoltator web începător, care creează site-uri moderne și frumoase de la zero.</p>
+    <h2>Despre noi</h2>
+    <p>
+        Suntem o echipă de profesioniști în construcții.
+        Lucrăm rapid, curat și la calitate înaltă.
+    </p>
 </section>
 
+<!-- SERVICES -->
 <section id="projects" class="section">
 
-    <h2>Serviciile mele</h2>
+    <h2>Serviciile noastre</h2>
 
     <div class="filters">
         <button onclick="showAll()">Toate</button>
-        <button onclick="show('screed')">Șapă (стяжка)</button>
-        <button onclick="show('plaster')">Tencuială (штукатурка)</button>
+        <button onclick="show('screed')">Șapă</button>
+        <button onclick="show('plaster')">Tencuială</button>
         <button onclick="show('drywall')">Gips-carton</button>
         <button onclick="show('putty')">Șpăcluire</button>
         <button onclick="show('paint')">Vopsitorie</button>
@@ -55,7 +64,6 @@
     </div>
 
     <div class="grid">
-
         <div class="card screed">Șapă</div>
         <div class="card plaster">Tencuială</div>
         <div class="card drywall">Gips-carton</div>
@@ -68,29 +76,26 @@
         <div class="card concrete">Beton</div>
         <div class="card paving">Pavele</div>
         <div class="card insulation">Izolație fațadă</div>
-
     </div>
 
 </section>
 
-      <div class="card">
-            <h3>Future Project</h3>
-            <p>Скоро будет 🚀</p>
-        </div>
-    </div>
-</section>
-
+<!-- CONTACT -->
 <section id="contact" class="section">
-   <h2>Contact</h2>
-<p>Email: example@mail.com</p>
+    <h2>Contact</h2>
+
+    <p>📞 +40 XXX XXX XXX</p>
+    <p>📧 example@mail.com</p>
+
+    <a href="https://wa.me/40XXXXXXXXX" class="btn">WhatsApp</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
-   <p>© 2026 iviConstruct — Portofoliu Ultra</p>
+    <p>© 2026 iviConstruct - Toate drepturile rezervate</p>
 </footer>
 
-</body>
-</html>
+<!-- JS -->
 <script>
 function show(category) {
     let items = document.querySelectorAll('.card');
@@ -111,3 +116,6 @@ function showAll() {
     });
 }
 </script>
+
+</body>
+</html>
