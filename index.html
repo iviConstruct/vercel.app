@@ -1,121 +1,217 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <title>iviConstruct - Constructii Profesionale</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>iviConstruct</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #0a0f1c;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    opacity: 0.7;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-box {
+    text-align: center;
+    padding: 60px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #6c5ce7, #00c6ff);
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.section p {
+    opacity: 0.7;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* CARD */
+.card {
+    width: 220px;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.08);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.5;
+}
+
+/* ANIMATION */
+.hero-box, .card {
+    animation: fade 0.8s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 28px; }
+    .hero-box { padding: 30px; }
+    .grid { flex-direction: column; align-items: center; }
+    .card { width: 90%; }
+}
+</style>
+
 </head>
 
 <body>
 
 <!-- NAV -->
-<header class="nav">
-    <div class="logo">iviConstruct ⚡</div>
-
-    <nav>
+<div class="nav">
+    <div><b>iviConstruct</b></div>
+    <div>
         <a href="#about">Despre</a>
-        <a href="#projects">Servicii</a>
+        <a href="#services">Servicii</a>
         <a href="#contact">Contact</a>
-    </nav>
-</header>
+    </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
     <div class="hero-box">
-        <h1>Construcții Profesionale</h1>
-        <p>Șapă • Tencuială • Gips-carton • Gresie • Parchet</p>
-
-        <a href="#projects" class="btn">Vezi lucrările</a>
-        <a href="#contact" class="btn secondary">Contactează-ne</a>
+        <h1>Construcții Moderne</h1>
+        <p>Șapă • Tencuială • Gips-carton • Finisaje premium</p>
+        <a href="#services" class="btn">Vezi servicii</a>
+        <a href="#contact" class="btn">Contact</a>
     </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
     <h2>Despre noi</h2>
-    <p>
-        Suntem o echipă de profesioniști în construcții.
-        Lucrăm rapid, curat și la calitate înaltă.
-    </p>
+    <p>O echipă de profesioniști în construcții și finisaje moderne.</p>
 </section>
 
 <!-- SERVICES -->
-<section id="projects" class="section">
-
-    <h2>Serviciile noastre</h2>
-
-    <div class="filters">
-        <button onclick="showAll()">Toate</button>
-        <button onclick="show('screed')">Șapă</button>
-        <button onclick="show('plaster')">Tencuială</button>
-        <button onclick="show('drywall')">Gips-carton</button>
-        <button onclick="show('putty')">Glet</button>
-        <button onclick="show('paint')">Lavabila</button>
-        <button onclick="show('tiles')">Gresie și faianță</button>
-        <button onclick="show('parquet')">Parchet</button>
-        <button onclick="show('skirting')">Plintă</button>
-        <button onclick="show('fence')">Garduri</button>
-        <button onclick="show('concrete')">Beton</button>
-        <button onclick="show('paving')">Pavele</button>
-        <button onclick="show('insulation')">Izolație fațadă</button>
-    </div>
+<section id="services" class="section">
+    <h2>Servicii</h2>
 
     <div class="grid">
-        <div class="card screed">Șapă</div>
-        <div class="card plaster">Tencuială</div>
-        <div class="card drywall">Gips-carton</div>
-        <div class="card putty">Șpăcluire</div>
-        <div class="card paint">Vopsitorie</div>
-        <div class="card tiles">Gresie și faianță</div>
-        <div class="card parquet">Parchet</div>
-        <div class="card skirting">Plintă</div>
-        <div class="card fence">Garduri</div>
-        <div class="card concrete">Beton</div>
-        <div class="card paving">Pavele</div>
-        <div class="card insulation">Izolație fațadă</div>
+        <div class="card">Șapă</div>
+        <div class="card">Tencuială</div>
+        <div class="card">Gips-carton</div>
+        <div class="card">Gresie</div>
+        <div class="card">Parchet</div>
+        <div class="card">Fațade</div>
     </div>
-
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
     <h2>Contact</h2>
-
     <p>📞 +40 XXX XXX XXX</p>
     <p>📧 example@mail.com</p>
 
-    <a href="https://wa.me/40XXXXXXXXX" class="btn">WhatsApp</a>
+    <a class="btn" href="https://wa.me/40XXXXXXXXX">WhatsApp</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 iviConstruct - Toate drepturile rezervate</p>
+    © 2026 iviConstruct - All rights reserved
 </footer>
-
-<!-- JS -->
-<script>
-function show(category) {
-    let items = document.querySelectorAll('.card');
-
-    items.forEach(item => {
-        if (item.classList.contains(category)) {
-            item.style.display = "block";
-        } else {
-            item.style.display = "none";
-        }
-    });
-}
-
-function showAll() {
-    let items = document.querySelectorAll('.card');
-    items.forEach(item => {
-        item.style.display = "block";
-    });
-}
-</script>
 
 </body>
 </html>
