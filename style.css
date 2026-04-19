@@ -154,3 +154,9 @@ footer {
         transform: translateY(0);
     }
 }
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
