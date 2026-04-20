@@ -17,32 +17,25 @@
 }
 
 body {
-    background: #0a0f1c;
+    background: #0b0f1a;
     color: white;
-    overflow-x: hidden;
 }
 
 /* NAV */
 .nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 60px;
+    padding: 20px 40px;
     position: sticky;
     top: 0;
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
 }
 
 .nav a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
-    opacity: 0.7;
-}
-
-.nav a:hover {
-    opacity: 1;
 }
 
 /* HERO */
@@ -59,100 +52,80 @@ body {
     border-radius: 20px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(20px);
-    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
 }
 
 .hero h1 {
     font-size: 48px;
-    margin-bottom: 10px;
 }
 
 .hero p {
     opacity: 0.7;
-    margin-bottom: 20px;
+    margin: 15px 0;
 }
 
 /* BUTTON */
 .btn {
-    display: inline-block;
     padding: 12px 20px;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #6c5ce7, #00c6ff);
+    border-radius: 10px;
+    background: linear-gradient(90deg,#00c6ff,#0072ff);
     color: white;
     text-decoration: none;
     margin: 5px;
-    transition: 0.3s;
+    display: inline-block;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-}
-
-/* SECTIONS */
+/* SECTION */
 .section {
     padding: 100px 20px;
     text-align: center;
-    max-width: 900px;
-    margin: auto;
-}
-
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.section p {
-    opacity: 0.7;
 }
 
 /* GRID */
 .grid {
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
 }
 
 /* CARD */
 .card {
     width: 220px;
-    padding: 20px;
-    border-radius: 16px;
+    padding: 25px;
+    border-radius: 15px;
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(15px);
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    background: rgba(255,255,255,0.08);
+}
+
+/* CTA */
+.cta {
+    padding: 80px 20px;
+}
+
+.cta-box {
+    text-align: center;
+    padding: 50px;
+    border-radius: 20px;
+    background: linear-gradient(90deg,#00c6ff,#0072ff);
+    color: black;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 40px;
-    opacity: 0.5;
-}
-
-/* ANIMATION */
-.hero-box, .card {
-    animation: fade 0.8s ease;
-}
-
-@keyframes fade {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    opacity: 0.6;
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 28px; }
-    .hero-box { padding: 30px; }
-    .grid { flex-direction: column; align-items: center; }
-    .card { width: 90%; }
+@media(max-width:768px){
+    .hero h1 {font-size:30px;}
+    .grid {flex-direction: column;}
+    .card {width: 90%;}
 }
 </style>
 
@@ -162,9 +135,8 @@ footer {
 
 <!-- NAV -->
 <div class="nav">
-    <div><b>iviConstruct</b></div>
+    <b>iviConstruct ⚡</b>
     <div>
-        <a href="#about">Despre</a>
         <a href="#services">Servicii</a>
         <a href="#contact">Contact</a>
     </div>
@@ -173,30 +145,35 @@ footer {
 <!-- HERO -->
 <section class="hero">
     <div class="hero-box">
-        <h1>Construcții Moderne</h1>
-        <p>Șapă • Tencuială • Gips-carton • Finisaje premium</p>
-        <a href="#services" class="btn">Vezi servicii</a>
-        <a href="#contact" class="btn">Contact</a>
-    </div>
-</section>
+        <h1>Construcții moderne și de calitate</h1>
+        <p>Lucrări profesionale pentru casă și apartament</p>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-    <h2>Despre noi</h2>
-    <p>O echipă de profesioniști în construcții și finisaje moderne.</p>
+        <a href="#services" class="btn">Vezi serviciile</a>
+        <a href="#contact" class="btn">Contactează-ne</a>
+    </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
-    <h2>Servicii</h2>
+    <h2>Serviciile noastre</h2>
 
     <div class="grid">
         <div class="card">Șapă</div>
         <div class="card">Tencuială</div>
         <div class="card">Gips-carton</div>
-        <div class="card">Gresie</div>
+        <div class="card">Gresie și faianță</div>
         <div class="card">Parchet</div>
-        <div class="card">Fațade</div>
+        <div class="card">Izolație fațadă</div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="cta-box">
+        <h2>Ai nevoie de o lucrare?</h2>
+        <p>Scrie-ne direct pe WhatsApp</p>
+
+        <a href="https://wa.me/40XXXXXXXXX" class="btn">Contact rapid</a>
     </div>
 </section>
 
@@ -205,15 +182,11 @@ footer {
     <h2>Contact</h2>
     <p>📞 +40 XXX XXX XXX</p>
     <p>📧 example@mail.com</p>
-
-    <a class="btn" href="https://wa.me/40XXXXXXXXX">WhatsApp</a>
 </section>
 
 <footer>
-    © 2026 iviConstruct - All rights reserved
+© 2026 iviConstruct - Toate drepturile rezervate
 </footer>
 
 </body>
 </html>
- 
-<!-- update -->
