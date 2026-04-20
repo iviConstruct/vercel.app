@@ -3,28 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>iviConstruct PRO</title>
+<title>ivi Construct</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter',sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 body{
     color:white;
     background: radial-gradient(circle at top, #0b1220, #000);
     overflow-x:hidden;
 }
 
-/* glow */
-body::before,
-body::after{
+body::before,body::after{
     content:"";
     position:fixed;
     width:500px;
@@ -32,20 +23,9 @@ body::after{
     filter:blur(130px);
     z-index:-1;
 }
+body::before{background:#00c6ff;top:-150px;left:-150px;}
+body::after{background:#7c3aed;bottom:-150px;right:-150px;}
 
-body::before{
-    background:#00c6ff;
-    top:-150px;
-    left:-150px;
-}
-
-body::after{
-    background:#7c3aed;
-    bottom:-150px;
-    right:-150px;
-}
-
-/* NAV */
 .nav{
     display:flex;
     justify-content:space-between;
@@ -55,22 +35,13 @@ body::after{
     top:0;
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(255,255,255,0.1);
-    z-index:100;
 }
 
-.nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    opacity:0.7;
-}
-
+.nav a{color:white;text-decoration:none;margin-left:20px;opacity:0.7;}
 .nav a:hover{opacity:1;}
 
-/* HERO */
 .hero{
-    height:85vh;
+    height:80vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -78,193 +49,149 @@ body::after{
 }
 
 .hero-box{
-    padding:60px;
+    padding:50px;
     border-radius:20px;
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(25px);
-    box-shadow:0 20px 80px rgba(0,0,0,0.7);
 }
 
-.hero h1{
-    font-size:44px;
-    margin-bottom:10px;
-}
-
-.hero p{
-    opacity:0.7;
-    margin-bottom:20px;
-}
-
-/* BUTTON */
 .btn{
     display:inline-block;
     padding:12px 18px;
-    margin:5px;
+    margin:6px;
     border-radius:12px;
     text-decoration:none;
     color:white;
     background:linear-gradient(90deg,#00c6ff,#7c3aed);
-    transition:0.3s;
+    cursor:pointer;
 }
 
-.btn:hover{
-    transform:scale(1.05);
-}
-
-/* SECTION */
 .section{
-    padding:80px 20px;
+    padding:70px 20px;
     text-align:center;
 }
 
-/* GRID */
-.grid{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-    max-width:1000px;
-    margin:auto;
-}
-
-.card{
-    width:220px;
-    padding:20px;
-    border-radius:15px;
-    background:rgba(255,255,255,0.06);
-    backdrop-filter:blur(10px);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-/* CONTACT */
-.contact-box{
+.form-box{
     max-width:500px;
     margin:auto;
-    padding:30px;
+    padding:25px;
     border-radius:15px;
     background:rgba(255,255,255,0.06);
-    backdrop-filter:blur(10px);
 }
 
-/* SOCIAL */
-.social a{
-    display:block;
-    margin:10px 0;
-    color:white;
+input,select,textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:10px;
+    border:none;
+    outline:none;
+}
+
+textarea{height:100px;resize:none;}
+
+.quick-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:15px;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    padding:12px;
+    border-radius:10px;
     text-decoration:none;
-    opacity:0.8;
+    color:white;
+    font-weight:600;
 }
 
-.social a:hover{opacity:1;}
+.email-btn{
+    background:#ff4d4d;
+    padding:12px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
 
-/* FOOTER */
 footer{
     text-align:center;
     padding:40px;
     opacity:0.6;
 }
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    padding:14px 16px;
-    border-radius:50px;
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-    .hero h1{font-size:28px;}
-    .hero-box{padding:30px;}
-    .card{width:90%;}
-}
 </style>
-
 </head>
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
-    <b>iviConstruct PRO ⚡</b>
-    <div>
-        <a href="#services">Servicii</a>
-        <a href="#contact">Contact</a>
-    </div>
+<b>ivi Construct</b>
+<div>
+<a href="#order">Comandă</a>
+<a href="#contact">Contact</a>
+</div>
 </div>
 
-<!-- HERO -->
 <section class="hero">
-    <div class="hero-box">
-        <h1>Construcții Profesionale</h1>
-        <p>Calitate, seriozitate și lucrări la cheie</p>
-
-        <a class="btn" href="#services">Servicii</a>
-        <a class="btn" href="#contact">Contact</a>
-    </div>
+<div class="hero-box">
+<h1>ivi Construct</h1>
+</div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section">
-    <h2>Serviciile noastre</h2>
+<section id="order" class="section">
+<h2>Trimite cererea ta</h2>
 
-    <div class="grid">
-        <div class="card">Tencuială</div>
-        <div class="card">Șapă</div>
-        <div class="card">Gresie și faianță</div>
-        <div class="card">Glet</div>
-        <div class="card">Vopsea lavabilă</div>
-        <div class="card">Rigips</div>
-        <div class="card">Parchet</div>
-        <div class="card">Pavele</div>
-        <div class="card">Beton</div>
-        <div class="card">Fațadă la cheie</div>
-        <div class="card">Porți și garduri</div>
-    </div>
+<div class="form-box">
+
+<input id="name" placeholder="Nume">
+<input id="phone" placeholder="Telefon">
+
+<select id="service">
+<option>Tencuială</option>
+<option>Șapă</option>
+<option>Gresie</option>
+<option>Glet</option>
+<option>Vopsire</option>
+<option>Renovare completă</option>
+</select>
+
+<input id="area" placeholder="Metri pătrați (ex: 120 m²)">
+<textarea id="details" placeholder="Detalii lucrare"></textarea>
+
+<div class="quick-buttons">
+<a id="wa" class="whatsapp-btn" target="_blank">WhatsApp</a>
+<a id="mail" class="email-btn">Email</a>
+</div>
+
+</div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-    <h2>Contact</h2>
+<footer>© ivi Construct</footer>
 
-    <div class="contact-box">
+<script>
+function buildMessage(){
+let name=document.getElementById('name').value;
+let phone=document.getElementById('phone').value;
+let service=document.getElementById('service').value;
+let area=document.getElementById('area').value;
+let details=document.getElementById('details').value;
 
-        <p style="font-size:18px;margin-bottom:10px;">
-            👤 <b>Burdujan Ion</b>
-        </p>
+return `Cerere:\nNume: ${name}\nTelefon: ${phone}\nServiciu: ${service}\nSuprafață: ${area}\nDetalii: ${details}`;
+}
 
-        <p style="margin-bottom:15px;">
-            📞 
-            <a href="tel:+40764843411" style="color:#00c6ff; text-decoration:none; font-weight:600;">
-                +40 764 843 411
-            </a>
-        </p>
+function updateLinks(){
+let msg=buildMessage();
 
-        <div class="social">
-            <a href="mailto:vanyaburduzhan029@gmail.com">📧 vanyaburduzhan029@gmail.com</a>
-            <a href="https://tiktok.com/@wanyushaburduzhan1993">🎵 TikTok</a>
-            <a href="https://www.facebook.com/share/1CS2ZrVYrh/">📘 Facebook</a>
-        </div>
+document.getElementById('wa').href=
+`https://wa.me/40764843411?text=`+encodeURIComponent(msg);
 
-    </div>
-</section>
+document.getElementById('mail').href=
+`mailto:vanyaburduzhan029@gmail.com?subject=Cerere&body=`+encodeURIComponent(msg);
+}
 
-<footer>
-© 2026 iviConstruct PRO
-</footer>
-
-<!-- WhatsApp -->
-<a class="whatsapp" href="https://wa.me/40764843411">WhatsApp</a>
+setInterval(updateLinks,500);
+</script>
 
 </body>
 </html>
