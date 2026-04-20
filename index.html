@@ -11,38 +11,38 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
 body{
-    background:#f6f8fb;
-    color:#1a1a1a;
+    background:#0f172a;
+    color:#e5e7eb;
     overflow-x:hidden;
 }
 
-/* HEADER */
+/* NAV */
 .nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:18px 40px;
-    background:white;
+    background:#111827;
     position:sticky;
     top:0;
-    box-shadow:0 4px 20px rgba(0,0,0,0.06);
+    box-shadow:0 4px 20px rgba(0,0,0,0.4);
     z-index:100;
 }
 
 .nav a{
     margin-left:20px;
     text-decoration:none;
-    color:#333;
+    color:#cbd5e1;
     font-weight:500;
 }
 
-.nav a:hover{color:#2563eb;}
+.nav a:hover{color:#60a5fa;}
 
 /* HERO */
 .hero{
     padding:90px 20px;
     text-align:center;
-    background:linear-gradient(135deg,#ffffff,#eef3ff);
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
 }
 
 .hero h1{
@@ -51,10 +51,11 @@ body{
 }
 
 .hero p{
-    opacity:0.7;
+    opacity:0.8;
     margin-bottom:20px;
 }
 
+/* BUTTON */
 .btn{
     display:inline-block;
     padding:12px 18px;
@@ -66,7 +67,7 @@ body{
     transition:0.3s;
 }
 
-.btn:hover{background:#1e4fd1;}
+.btn:hover{background:#1d4ed8;}
 
 /* SECTIONS */
 .section{
@@ -84,10 +85,10 @@ body{
 }
 
 .stat{
-    background:white;
+    background:#111827;
     padding:20px;
     border-radius:12px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
     min-width:120px;
 }
 
@@ -105,13 +106,13 @@ body{
     width:230px;
     padding:18px;
     border-radius:12px;
-    background:white;
-    box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    background:#111827;
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
     text-align:left;
 }
 
 .card h3{font-size:16px;margin-bottom:6px;}
-.card p{font-size:13px;opacity:0.7;}
+.card p{font-size:13px;opacity:0.8;}
 
 /* PORTFOLIO */
 .portfolio{
@@ -124,13 +125,12 @@ body{
 
 .portfolio div{
     height:160px;
-    background:#ddd;
     border-radius:12px;
     background-size:cover;
     background-position:center;
 }
 
-/* TESTIMONIALS */
+/* REVIEWS */
 .reviews{
     display:flex;
     flex-wrap:wrap;
@@ -141,24 +141,24 @@ body{
 }
 
 .review{
-    background:white;
+    background:#111827;
     padding:18px;
     border-radius:12px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
     width:260px;
 }
 
 .review b{display:block;margin-bottom:5px;}
-.review span{color:#f59e0b;}
+.review span{color:#fbbf24;}
 
 /* FORM */
 .form-box{
     max-width:500px;
     margin:auto;
-    background:white;
+    background:#111827;
     padding:25px;
     border-radius:12px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
 }
 
 input,select,textarea{
@@ -166,12 +166,15 @@ input,select,textarea{
     padding:12px;
     margin:8px 0;
     border-radius:10px;
-    border:1px solid #ddd;
+    border:1px solid #334155;
     outline:none;
+    background:#0b1220;
+    color:#e5e7eb;
 }
 
 textarea{height:110px;resize:none;}
 
+/* BUTTONS */
 .send-btn{
     width:100%;
     padding:12px;
@@ -199,7 +202,7 @@ textarea{height:110px;resize:none;}
 footer{
     text-align:center;
     padding:40px;
-    color:#777;
+    color:#94a3b8;
 }
 
 /* MAP */
@@ -218,6 +221,7 @@ footer{
 }
 </style>
 </head>
+
 <body>
 
 <div class="nav">
@@ -230,11 +234,9 @@ footer{
 </div>
 
 <section class="hero">
-<div>
 <h1>Renovări profesionale în București</h1>
 <p>Calitate, precizie și soluții complete pentru locuința ta</p>
 <a class="btn" href="#contact">Deviz Gratuit</a>
-</div>
 </section>
 
 <section class="section">
